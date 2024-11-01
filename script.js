@@ -1,12 +1,12 @@
 
  
-    const loaderAnimation=()=> {
-        var loader = document.querySelector("#loader");
-        setTimeout(function () {
-          loader.style.top = "-100%";
-        }, 5000);
-      }
-    const mouseFollower = () => {
+   
+  function loaderAnimation() {
+    var loader = document.querySelector("#loader");
+    setTimeout(function () {
+      loader.style.top = "-100%";
+    }, 5000);}
+    function mouseFollower () {
         window.addEventListener("mousemove", function (det) {
           document.querySelector(
             "#mouse-follower"
