@@ -47,9 +47,16 @@ a:hover {
   height: 10px;
   border-radius: 50%;
   position: absolute;
-  background-color: #fa1111;
+  background-color: cyan;
+  backdrop-filter: blur(10px);
+  border: 1px solid cyan;
   
-  z-index: 9999;
+  z-index: 99;
+}
+@media(max-width:768px){
+  #mouse-follower{
+    display: none;
+  }
 }
 
 .key{
@@ -62,23 +69,24 @@ a:hover {
 
 
 #loader{
-  display: none;
+  /* display: none; */
   height: 100%;
   width: 100%;
   background-color: #000;
   position: fixed;
   z-index: 999;
-  top: -100%;
+  top: 0%;
   transition: all ease 0.8s;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#loader *h1 {
-  font-size: 4vw;
+#loader h1 {
+  font-size: 4vh;
   color: transparent;
-  background: linear-gradient(to Right, rgb(0, 255, 234), rgba(0, 255, 85, 0.685));
+  background: linear-gradient(to right, teal, #007d7d, cyan);
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
   position: absolute;
   animation-name: load;
@@ -90,22 +98,21 @@ a:hover {
 #loader h1:nth-child(2){
   animation-delay: 2s;
 }
-#loader h1:nth-child(3){
-  animation-delay: 3s;
-}
-#loader h1:nth-child(4){
-  animation-delay: 4s;
-}
+
 
 @keyframes load{
   0%{
     opacity: 0;
   }
-  10%{
+  20%{
     opacity: 1;
   }
-  90%{
+  80%{
     opacity: 1;
   }
   100%{opacity: 0;}
+}
+.background{
+  background: linear-gradient(to right, rgba(0, 128, 128, 0.8), rgba(0, 255, 255, 0.8));
+
 }

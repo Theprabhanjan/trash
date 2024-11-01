@@ -3,7 +3,7 @@
     var loader = document.querySelector("#loader");
     setTimeout(function () {
       loader.style.top = "-100%";
-    }, 6000);
+    }, 5000);
   }
   function mouseFollower() {
     window.addEventListener("mousemove", function (det) {
@@ -15,7 +15,4 @@
 
   
   mouseFollower()
-  
-  
-  
   loaderAnimation();

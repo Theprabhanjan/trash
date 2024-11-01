@@ -8,24 +8,23 @@ import Project from './pages/Project';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import SkillsAndExperties from './pages/SkillsAndExperties';
-import Hero from './pages/Hero';
-import { assets } from './assets/assets';
+
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/src/locomotive-scroll.scss';
 import { useEffect } from 'react';
 
 
 function App() {
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector('#main'),
-      smooth: true,
-    });
+  // useEffect(() => {
+  //   const scroll = new LocomotiveScroll({
+  //     el: document.querySelector('#main'),
+  //     smooth: true,
+  //   });
 
-    return () => {
-      scroll.destroy();
-    };
-  }, []);
+  //   return () => {
+  //     scroll.destroy();
+  //   };
+  // }, []);
   return (
  
     <>

@@ -9,28 +9,28 @@ function Navbar() {
   const [visible, setVisible] = useState(false)
 
   return (
-    <div className='flex items-center justify-between sm:justify-center sm:px-5 px-6 pl-16   rounded-xl py-2 my-5  font-medium sticky top-1 backdrop-blur-md z-50 shadow-cyan-500/50  shadow-sm  '>
+    <div className='  flex items-center justify-between sm:justify-center sm:px-5 px-6 pl-16   rounded-xl py-2 my-5  font-medium sticky top-1 backdrop-blur-md z-50 shadow-cyan-500/50  shadow-sm  '>
         
         <ul className=' flex sm:gap-10 gap-16 text-sm text-gray-700 navbar'>
             <NavLink className='flex flex-col items-center gap-1 ' to='/' >
-            <p className=''>Home</p>
+            <p className=''>HOME</p>
             <hr className='w-2/4 border-none h-[1.5px] bg-cyan-500/50 hidden'/>
             </NavLink>
           
             <NavLink className='flex flex-col items-center gap-1 ' to='/about' >
-            <p>About</p>
+            <p>ABOUT </p>
             <hr className='w-2/4 border-none h-[1.5px] bg-cyan-500/50 hidden'/>
             </NavLink>
             <NavLink className='flex flex-col items-center gap-1 ' to='/project' >
-            <p> Project</p>
+            <p> PROJECTS</p>
             <hr className='w-2/4 border-none h-[1.5px] bg-cyan-500/50 hidden '/>
             </NavLink>
             <NavLink className=' hidden sm:flex   flex-col items-center gap-1 ' to='/skills' >
-            <p>Experties</p>
+            <p>EXPERTIES</p>
             <hr className='w-2/4  border-none h-[1.5px] bg-cyan-500/50 hidden'/>
             </NavLink>
             <NavLink className='w-2/4 hidden sm:flex  flex-col items-center gap-1 ' to='/contact' >
-            <p>Contact</p>
+            <p>CONTACT</p>
             <hr className='w-2/4 border-none h-[1.5px] bg-cyan-500/50 hidden'/>
             </NavLink>           
         </ul>
@@ -44,7 +44,7 @@ function Navbar() {
                 <hr className='border-slate-50/20' />
                 <NavLink className="py-2 pl-6 " onClick={()=>setVisible(false)} to="/">HOME</NavLink>
                 <hr className='border-slate-50/20' />
-                <NavLink className="py-2 pl-6 " onClick={()=>setVisible(false)} to="/skills">Experties</NavLink>
+                <NavLink className="py-2 pl-6 " onClick={()=>setVisible(false)} to="/skills">EXPERTIES</NavLink>
                 <hr className='border-slate-50/20' />
                 <NavLink className="py-2 pl-6 " onClick={()=>setVisible(false)} to="/contact">CONTACT</NavLink>
                 <hr className='border-slate-50/20' />
