@@ -1,4 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Gloria+Hallelujah&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: black;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  color: white;
+  font-family: "Inter", serif;
+}
+
+.handWritten-font{
+  
+    font-family: "Gloria Hallelujah", serif;
+    font-weight: 400;
+    font-style: normal;
+    opacity: 0.6;
+  }
+
+a.active hr {
+  display: block;
+  
+}
+
+a:hover {
+  color: white;
+  transition: ease-in;
+  animation-duration: 300ms;
+}
+.sidebar{
+  backdrop-filter: blur(50px);
+}
+.round{
+  border-radius: 3rem;
+}
+
+#mouse-follower {
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #fa1111;
+  
+  z-index: 9999;
+}
+
+.key{
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+
+#loader{
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  z-index: 999;
+  top: -100%;
+  transition: all ease 0.8s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loader *h1 {
+  font-size: 4vw;
+  color: transparent;
+  background: linear-gradient(to Right, rgb(0, 255, 234), rgba(0, 255, 85, 0.685));
+  -webkit-background-clip: text;
+  opacity: 0;
+  position: absolute;
+  animation-name: load;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  text-transform: uppercase;
+}
+#loader h1:nth-child(2){
+  animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+  animation-delay: 3s;
+}
+#loader h1:nth-child(4){
+  animation-delay: 4s;
+}
+
+@keyframes load{
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{opacity: 0;}
+}
