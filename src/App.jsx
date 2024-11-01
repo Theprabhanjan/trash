@@ -12,6 +12,7 @@ import SkillsAndExperties from './pages/SkillsAndExperties';
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/src/locomotive-scroll.scss';
 import { useEffect } from 'react';
+import Loader from './components/Loader';
 
 
 
@@ -41,9 +42,9 @@ useEffect(()=>{loaderAnimation()},[])
   return (
  
     <>
-    
+    <Loader/>
     <Navbar/>
-    <MouseFollower/>
+    
     <div className='  px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] mt-5 min-h-[100vh] flex-1  ' id='main' >
       
       <div id='temp ' >
