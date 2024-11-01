@@ -12,6 +12,8 @@ import SkillsAndExperties from './pages/SkillsAndExperties';
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/src/locomotive-scroll.scss';
 import { useEffect } from 'react';
+import MouseFollower from './components/MouseFollower';
+import Loader from './components/Loader';
 
 
 function App() {
@@ -25,11 +27,27 @@ function App() {
       scroll.destroy();
     };
   }, []);
+
+ const loaderAnimation=()=> {
+    var loader = document.querySelector("#loader");
+    setTimeout(function () {
+        loader.style.top = "-100%"; // Move loader out of view
+    }, 5000);
+}
+const mouseFollower=()=> {
+  window.addEventListener("mousemove", function (det) {
+      document.querySelector("#mouse-follower").style.transform = `translate(${det.clientX}px, ${det.clientY}px)`;
+  });
+}
+useEffect(()=>{loaderAnimation()},[])
+useEffect(()=>{mouseFollower()},[])
+
   return (
  
     <>
     
     <Navbar/>
+    <MouseFollower/>
     <div className='  px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] mt-5 min-h-[100vh] flex-1  ' id='main' >
       
       <div id='temp ' >

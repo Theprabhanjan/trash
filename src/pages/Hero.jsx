@@ -5,7 +5,7 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 function Hero() {
   const [text] = useTypewriter({
     words: [
-      'Building bridges between tech & creativity..',
+      'Building bridges between technology & creativity..',
       'Exploring the future of electronics...',
       'Talent is cheaper than salt!',
       "That's why lots of hard work is needed",
