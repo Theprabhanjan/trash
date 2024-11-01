@@ -15,16 +15,16 @@ import { useEffect } from 'react';
 
 
 function App() {
-  // useEffect(() => {
-  //   const scroll = new LocomotiveScroll({
-  //     el: document.querySelector('#main'),
-  //     smooth: true,
-  //   });
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('#main'),
+      smooth: true,
+    });
 
-  //   return () => {
-  //     scroll.destroy();
-  //   };
-  // }, []);
+    return () => {
+      scroll.destroy();
+    };
+  }, []);
   return (
  
     <>
