@@ -1,7 +1,8 @@
+// In your script.js file
 function loaderAnimation() {
     var loader = document.querySelector("#loader");
     setTimeout(function () {
-        loader.style.top = "-100%"; // Adjust this if needed
+        loader.style.top = "-100%"; // Move loader out of view
     }, 5000);
 }
 
@@ -11,7 +12,7 @@ function mouseFollower() {
     });
 }
 
-// Ensure functions run after DOM is fully loaded
+// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     mouseFollower();
     loaderAnimation();
