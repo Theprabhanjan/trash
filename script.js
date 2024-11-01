@@ -15,5 +15,5 @@ function mouseFollower() {
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     mouseFollower();
-    loaderAnimation();
 });
+loaderAnimation();
